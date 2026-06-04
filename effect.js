@@ -226,7 +226,6 @@ let images = [
   "images/images1.jpeg",
   "images/images2.jpeg",
   "images/images3.jpeg",
-  "images/images4.jpeg",
   "images/images5.jpeg"	
 ]; 
 let index = 0;
