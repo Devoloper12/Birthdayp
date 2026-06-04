@@ -45,16 +45,22 @@
     	<h2 style="color:#D14D39;">D</h2>
     </div>
 	<div class="balloons text-center" id="b4">
-    	<h2 style="color:#8FAD00;">X</h2>
+    	<h2 style="color:#8FAD00;">P</h2>
     </div>
 	<div class="balloons text-center" id="b5">
-    	<h2 style="color:#8377E4;">O</h2>
+    	<h2 style="color:#8377E4;">A</h2>
     </div>
     <div class="balloons text-center" id="b6">
-    	<h2 style="color:#99C96A;">L</h2>
+    	<h2 style="color:#99C96A;">S</h2>
     </div>
     <div class="balloons text-center" id="b7">
-    	<h2 style="color:#20CFB4;">A</h2>
+    	<h2 style="color:#20CFB4;">H</h2>
+    </div>
+	<div class="balloons text-center" id="b7">
+    	<h2 style="color:#F2B300;">U</h2>
+    </div>
+	<div class="balloons text-center" id="b7">
+    	<h2 style="color:#8FAD00;">U</h2>
     </div>
 
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
@@ -113,9 +119,6 @@
 				<p>Do you know..?</p>
 				<p>today is just special</p>
 				<p>so special to you</p>
-				<p>that's why</p>
-				<p>Let's make it...</p>
-				<p>the best celebration ever</p>
 				<p>and let me share...</p>
 				<p>a piece of happiness to you</p>
 				<p>I made all this...</p>
@@ -130,6 +133,25 @@
 			</div>
 		</div>
 		
+		<!-- Slideshow Container -->
+<div id="slideshow" class="text-center" style="display:none;">
+  <img id="slideImage" src="images/images1.jpg" style="max-width:400px; margin:10px auto;">
+</div>
+<script>
+  let images = ["images/images1.jpg"];
+  let index = 0;
+  let slideshowInterval;
+
+  function startSlideshow() {
+    document.getElementById("slideshow").style.display = "block";
+    document.getElementById("slideImage").src = images[index];
+    slideshowInterval = setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById("slideImage").src = images[index];
+    }, 2000); // changes every 2 seconds
+  }
+</script>
+
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
@@ -141,6 +163,9 @@
 					<button class="btn btn-primary" id="light_candle"> Light Candle</button>
 					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
 					<button class="btn btn-primary" id="story">A mesage for you</button>
+					<!-- Slideshow Button -->
+                   <button class="text-center" style="margin:20px;">
+                   <button onclick="startSlideshow()" class="btn btn-primary">View Memories Slideshow</button>
 					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
 				</div>
 			</div>
