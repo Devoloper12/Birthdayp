@@ -169,6 +169,9 @@ $('document').ready(function(){
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
+	// 👉 Show Memories button with fade-in
+    $('#memoriesButton').fadeIn('slow');
+        });	
 		
 		var i;
 
