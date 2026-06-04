@@ -221,6 +221,41 @@ function loopNine() {
 	});
 });
 
+// Slideshow setup
+let images = [
+  "images/images1.jpg",
+  "images/images2.jpg",
+  "images/images3.jpg",
+  "images/images4.jpg"
+]; 
+let index = 0;
+let slideshowInterval;
+
+function startSlideshow() {
+  document.getElementById("slideshow").style.display = "block";
+  document.getElementById("slideImage").src = images[index];
+  
+  // Auto-rotate every 3 seconds
+  slideshowInterval = setInterval(() => {
+    nextSlide();
+  }, 3000);
+}
+
+function nextSlide() {
+  index = (index + 1) % images.length;
+  document.getElementById("slideImage").src = images[index];
+}
+
+function prevSlide() {
+  index = (index - 1 + images.length) % images.length;
+  document.getElementById("slideImage").src = images[index];
+}
+
+function stopSlideshow() {
+  clearInterval(slideshowInterval);
+}
+
+
 
 
 
