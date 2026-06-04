@@ -168,6 +168,8 @@ function loopNine() {
 		$('#b5').attr('id','b55')
 		$('#b6').attr('id','b66')
 		$('#b7').attr('id','b77')
+		$('#b8').attr('id','b88')
+        $('#b9').attr('id','b99')
 		$('#b11').animate({top:240, left: vw-350},500);
 		$('#b22').animate({top:240, left: vw-250},500);
 		$('#b33').animate({top:240, left: vw-150},500);
@@ -175,6 +177,9 @@ function loopNine() {
 		$('#b55').animate({top:240, left: vw+50},500);
 		$('#b66').animate({top:240, left: vw+150},500);
 		$('#b77').animate({top:240, left: vw+250},500);
+        $('#b88').animate({top:240, left: vw+350},500);
+        $('#b99').animate({top:240, left: vw+450},500);
+
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
