@@ -132,26 +132,19 @@
 				<p>A VERY HAPPY BIRTHDAY GOURII..</p>
 			</div>
 		</div>
-		
-		<!-- Slideshow Container -->
+
+		<!--Memories Button-->
+<div class="row">
+  <div class="col-md-12 text-center" style="margin-top:20px;">
+    <button onclick="startSlideshow()" class="btn btn-primary">View Memories Slideshow</button>
+  </div>
+</div>
+
+<!-- Slideshow Container -->
 <div id="slideshow" class="text-center" style="display:none;">
   <img id="slideImage" src="images/images1.jpg" style="max-width:400px; margin:10px auto;">
 </div>
-<script>
-  let images = ["images/images1.jpg"];
-  let index = 0;
-  let slideshowInterval;
-
-  function startSlideshow() {
-    document.getElementById("slideshow").style.display = "block";
-    document.getElementById("slideImage").src = images[index];
-    slideshowInterval = setInterval(() => {
-      index = (index + 1) % images.length;
-      document.getElementById("slideImage").src = images[index];
-    }, 2000); // changes every 2 seconds
-  }
-</script>
-
+		
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
