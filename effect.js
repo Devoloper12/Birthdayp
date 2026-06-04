@@ -169,9 +169,6 @@ $('document').ready(function(){
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
-	// 👉 Show Memories button with fade-in
-    $('#memoriesButton').fadeIn('slow');
-        });	
 		
 		var i;
 
@@ -182,8 +179,9 @@ $('document').ready(function(){
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
-				});
-				
+				// 👉 Show Memories button only after last line
+                    $('#memoriesButton').fadeIn('slow');
+                });
 			}
 			else{
 				msgLoop(i);
