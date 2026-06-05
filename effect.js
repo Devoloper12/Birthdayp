@@ -237,16 +237,38 @@ let slideshowInterval;
 
 function startSlideshow() {
   // Hide the cake before showing slideshow
-  document.querySelector('.cake').style.display = "none";
+  $('.cake').fadeOut('slow');
 
+  // Show slideshow
   document.getElementById("slideshow").style.display = "block";
   document.getElementById("slideImage").src = images[index];
-  
-  // Auto-rotate every 3 seconds
+
+  // Make balloons float upward again
+  $('#b11,#b22,#b33,#b44,#b55,#b66,#b77,#b88,#b99').animate(
+    { top: -200 }, // move them up off the screen
+    8000,          // duration in ms
+    function() {
+      // optional: loop them back down and up again
+      $(this).css({ top: '100%' });
+      startBalloonLoop($(this));
+    }
+  );
+
+  // Auto-rotate slideshow every 3 seconds
   slideshowInterval = setInterval(() => {
     nextSlide();
   }, 3000);
 }
+
+// helper to keep balloons looping
+function startBalloonLoop(balloon) {
+  var randleft = 1000 * Math.random();
+  var randtop = 500 * Math.random();
+  balloon.animate({ left: randleft, bottom: randtop }, 10000, function () {
+    startBalloonLoop(balloon);
+  });
+}
+
 
 
 function nextSlide() {
