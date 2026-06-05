@@ -226,7 +226,11 @@ let images = [
   "images/images1.jpeg",
   "images/images2.jpeg",
   "images/images3.jpeg",
-  "images/images5.jpeg"	
+  "images/images5.jpeg",
+  "images/images6.jpeg",
+  "images/images7.jpeg",
+  "images/images8.jpeg",
+  "images/images9.jpeg"
 ]; 
 let index = 0;
 let slideshowInterval;
