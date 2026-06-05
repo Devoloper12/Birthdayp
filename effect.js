@@ -236,6 +236,9 @@ let index = 0;
 let slideshowInterval;
 
 function startSlideshow() {
+  // Hide the cake before showing slideshow
+  document.querySelector('.cake').style.display = "none";
+
   document.getElementById("slideshow").style.display = "block";
   document.getElementById("slideImage").src = images[index];
   
@@ -244,6 +247,7 @@ function startSlideshow() {
     nextSlide();
   }, 3000);
 }
+
 
 function nextSlide() {
   index = (index + 1) % images.length;
